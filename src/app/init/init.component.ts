@@ -48,7 +48,7 @@ export class InitComponent {
     private jsonValidateService: JsonValidateService,
     private snackBar: MatSnackBar,
     private router: Router
-  ) { }
+  ) { this.loadExample() }
 
   /**
    * The event handler function responsible for validating and setting the inserted text
