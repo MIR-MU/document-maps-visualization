@@ -76,7 +76,8 @@ export function getWordId(word: string, corpus: Corpus): string {
  * @param corpus  The corpus to perform the query on
  */
 export function getWord(id: string, corpus: Corpus): string {
-  return corpus.dictionary[id];
+  // Strip leaders added by the BPE tokenizer
+  return corpus.dictionary[id].replace(/^Ġ/, '');
 }
 
 /**
